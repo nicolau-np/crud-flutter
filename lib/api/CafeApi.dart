@@ -22,7 +22,7 @@ class CafeApi {
   static Future httpGet(String path) async {
     try {
       final resp = await _dio.get(path);
-
+      print(resp);
       return resp.data;
     } on DioError catch (e) {
       throw ("Error no GET $e");
