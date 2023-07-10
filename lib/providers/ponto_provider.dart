@@ -2,6 +2,7 @@ import 'package:ecomap/api/CafeApi.dart';
 import 'package:ecomap/models/ponto.dart';
 import 'package:ecomap/models/http/ponto_response.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 class PontoProvider extends ChangeNotifier {
   PontoProvider() {
@@ -11,8 +12,7 @@ class PontoProvider extends ChangeNotifier {
 
   getPontos() async {
     final resp = await CafeApi.httpGet("/pontos");
-
-    final pontoResp = PontosResponse.fromMap(resp);
+   final pontoResp = PontosResponse.fromMap(resp);
 
     pontos = [...pontoResp.pontos];
 

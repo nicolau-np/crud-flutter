@@ -14,8 +14,7 @@ class IndexPage extends StatefulWidget {
 class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
-    final pontoProvider = Provider.of<PontoProvider>(context, listen: false);
-
+    
     return Scaffold(
       appBar: AppBar(
         title: const Text('Listar'),
