@@ -38,6 +38,9 @@ dependencies:
   shared_preferences: ^2.0.13
   provider: ^6.0.5
   dio: ^4.0.0
+  http: ^0.13.4
+  get_it: ^6.0.0
+  http_client: ^1.5.0
 
 dev_dependencies:
   flutter_test:
