@@ -25,7 +25,7 @@ class _EditState extends State<Edit> {
         errorMessage = response.errorMessage ?? '';
       }*/
       ponto = response.data;
-      _nome.text = ponto.nome;
+      //_nome.text = ponto.nome;
     });
     super.initState();
   }
@@ -41,7 +41,7 @@ class _EditState extends State<Edit> {
         child: Column(
           children: [
             const TextField(
-              controller: _nome,
+              
               decoration: InputDecoration(hintText: 'Nome'),
             ),
             Container(

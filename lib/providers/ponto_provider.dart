@@ -12,13 +12,10 @@ class PontoProvider extends ChangeNotifier {
   getPontos() async {
     final resp = await CafeApi.httpGet("/pontos");
     
-
     final pontoResp =
         resp.pontos.map((resp) => PontosResponse.fromMap(resp)).toList();
 
-print(pontoResp);
-
-/*    pontos = [...pontoResp.pontos];*/
+    pontos = [...pontoResp.pontos];
 
     notifyListeners();
   }
