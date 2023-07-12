@@ -15,4 +15,16 @@ class Ponto {
       this.long,
       this.tipo,
       this.file});
+
+      factory Ponto.fromJson(Map<String, dynamic> item){
+        return Ponto(
+            id: item['id'],
+            nome: item['nome'],
+            descricao: item['descricao'],
+            lat: item['lat'],
+            long: item['long'],
+            tipo: item['tipo'],
+            file: item['file'],
+          );
+      }
 }
